@@ -18,13 +18,13 @@ function App() {
   useEffect(() => {
     async function getProducts() {
       const products = await axios.get(
-        'https://server-squa.onrender.com/products'
+        'https://api.render.com/deploy/srv-ckll9n0u1l6c73c2q2bg?key=is7QaMixYRM/products'
       );
       dispatch(fetchProducts(products.data));
     }
 
     getProducts();
-  }, []);
+  }, [dispatch]);
 
   return (
     <>
